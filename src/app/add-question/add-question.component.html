@@ -1,0 +1,18 @@
+<div>
+    <h2>Add question</h2>
+
+    <form [formGroup] = "questionForm" (ngSubmit) = "onSubmit()">
+        <div>
+            Question Text: 
+            <input type="text" formControlName = "questionText">
+        </div>
+
+        <div>
+            Correct Answer:
+            <input type="text" formControlName = "correctAnswer">
+        </div>
+
+        <button type="submit" [disabled]="!questionForm.valid">Add Question</button>
+
+    </form>
+</div>
